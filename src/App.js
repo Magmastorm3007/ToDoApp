@@ -24,14 +24,7 @@ function AppendTask(e){
   }
   ref.push(todo)
 }
-
-
-
-
-
-
-
-  return (
+return (
    <div className="App">
 <Navbar color="dark" light expand="md">
  <NavbarBrand><h3>To Do List WebApp</h3></NavbarBrand>
