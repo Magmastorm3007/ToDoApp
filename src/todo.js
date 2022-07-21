@@ -18,6 +18,7 @@ export default function Todo({todo}) {
           completed:todo.completed,
         }
         const ref= firebase.database().ref("ToDo").child(todo.id)
+        console.log(todo.completed)
         ref.update({
           completed:!todo.completed,
         })
@@ -27,7 +28,7 @@ export default function Todo({todo}) {
       }
   return (<div className='todolist'>
     
-    <p> <input type="checkbox" className='check' defaultChecked={todo.completed=='true'}  onClick={check} />
+    <p> <input type="checkbox" className='check' defaultChecked={todo.completed}  onClick={check} />
    {todo.task}
     <FontAwesomeIcon icon={faTrash} onClick={deletetodo} color="red" />
      
